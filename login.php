@@ -100,7 +100,7 @@ if(isset($_POST["submit"])){
                 <h2 class="text-center">Login</h2>
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                        <form method="POST" action="verification.php">
                             <div class="form-group">
                                 <div class="form-row">
                                     <div class="col"><label>Username</label><input name="username" class="form-control" type="text"></div>
