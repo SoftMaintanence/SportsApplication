@@ -15,15 +15,16 @@ $conn->select_db($dbname);
 $conn->query("CREATE TABLE IF NOT EXISTS users (
                 ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 `name` VARCHAR(255) not null,
-                age VARCHAR(255) not null,                
+                age INT(11) not null,                
                 email VARCHAR(255) not null,
-                `password` VARCHAR(50) not null,
+                `password` VARCHAR(100) not null,
                 `weight` VARCHAR(255) NOT NULL,
-                height VARCHAR(50),
-                regimen VARCHAR(50),
+                height float,
+                BMI float,
+                regimen INT(11),
                 preferences VARCHAR(255),
                 gender VARCHAR(255),
-                UNIQUE (Email)
+                UNIQUE (email)
             )");
             
 

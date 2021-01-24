@@ -17,40 +17,44 @@ $conn->query("CREATE TABLE IF NOT EXISTS users (
                 `name` VARCHAR(255) not null,
                 age INT(11) not null,                
                 email VARCHAR(255) not null,
-                `password` VARCHAR(50) not null,
+                `password` VARCHAR(100) not null,
                 `weight` VARCHAR(255) NOT NULL,
                 height float,
                 BMI float,
                 regimen INT(11),
                 preferences VARCHAR(255),
                 gender VARCHAR(255),
-                UNIQUE (Email)
+                UNIQUE (email)
             )");
             
 
 if(isset($_POST["register"])){
 
-    //change height to meters
-    $heightMeters = $_POST['height']/100;
+    // Sanitize $_POST array (Remove unwanted characters)
+    $POST=filter_var_array($_POST,FILTER_SANITIZE_STRING);
 
-    $name=$_POST['name'];
-    $age=$_POST['age'];
-    $email=$_POST['email'];
-    $weight=$_POST['weight'];
-    $height=$_POST['height'];
+    //change height to meters
+    $heightMeters = $POST['height']/100;
+
+    $name=$POST['name'];
+    $age=$POST['age'];
+    $email=$POST['email'];
+    $weight=$POST['weight'];
+    $height=$POST['height'];
+
     //BMI Calculation
-    $BMI = $_POST['weight']/($heightMeters*$heightMeters);
-    $regimen=$_POST['regimen'];
-    $gender=$_POST['gender'];
-    $preferences=$_POST['preferences'];
-    $password=$conn->real_escape_string($_POST['password']);
-    $confirmPassword=$conn->real_escape_string($_POST['confirm_password']);
+    $BMI = $POST['weight']/($heightMeters*$heightMeters);
+    $regimen=$POST['regimen'];
+    $gender=$POST['gender'];
+    $preferences=$POST['preferences'];
+    $password=$conn->real_escape_string($POST['password']);
+    $confirmPassword=$conn->real_escape_string($POST['confirm_password']);
 
     // Compares passwords
     if($password === $confirmPassword){
-        $password=md5($password);
+        $password=password_hash($password,PASSWORD_DEFAULT);
         $insert_sql = "INSERT INTO users (`name`, `age`, `email`, `password`, `weight`, `height`, `BMI`,`regimen`, `preferences`, `gender`)
-                    VALUES ('$name', '$age', '$email','$password','$weight', '$height', '$BMI', '$regimen','$preferences', '$gender')";
+                                VALUES ('$name', '$age', '$email','$password','$weight', '$height', '$BMI', '$regimen','$preferences', '$gender')";
         if($conn->query($insert_sql)===true){
         echo '<script type="text/javascript">';
         echo ' alert("Your account has been registered. You may login now.")';  //not showing an alert box.
@@ -69,10 +73,39 @@ if(isset($_POST["register"])){
 
 
 
-if(isset($_POST["submit"])){
+if(isset($_POST["login"])){
 
-    $sql = "SELECT email,`password` FROM users";
+    // Sanitize $_POST array (Remove unwanted characters)
+    $POST = filter_var_array($_POST , FILTER_SANITIZE_STRING);
 
+    $email=$POST["email"];
+    $password=$POST["password"];
+
+
+    $sql = "SELECT email,`password` FROM users WHERE email='$email'";
+
+    $result = mysqli_query($conn, $sql);
+
+    $resultRows = mysqli_fetch_assoc($result);
+
+    // Checks if password matches the hash
+    if(password_verify($password,$resultRows["password"])){
+
+        // Can register a $_SESSION variable here to make sure the user has logged in 
+
+        header("Location:verification.php");
+
+        // To show that there is a password match in database. Pls remove once all settle
+        print_r($resultRows);
+
+    
+
+
+
+    }
+    else{
+        echo '<script> alert("Invalid Login, please try again.") </script>';
+    }
     
 }
 
@@ -100,16 +133,16 @@ if(isset($_POST["submit"])){
                 <h2 class="text-center">Login</h2>
                 <div class="card">
                     <div class="card-body">
-                        <form method="POST" action="verification.php">
+                        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                             <div class="form-group">
                                 <div class="form-row">
-                                    <div class="col"><label>Username</label><input name="username" class="form-control" type="text"></div>
+                                    <div class="col"><label>Email</label><input placeholder="Email Address" name="email" class="form-control" type="text"></div>
                                 </div>
                                 <div class="form-row" style="margin-bottom: 15px;">
-                                    <div class="col"><label>Password</label><input name="password" class="form-control" type="password"></div>
+                                    <div class="col"><label>Password</label><input placeholder="Password" name="password" class="form-control" type="password"></div>
                                 </div>
                                 <div class="form-row justify-content-center align-items-center">
-                                    <div class="col-lg-4"><button class="btn btn-primary btn-block" name="submit" type="submit">Login</button></div>
+                                    <div class="col-lg-4"><button class="btn btn-primary btn-block" name="login" type="submit">Login</button></div>
                                 </div>
                                 <div class="form-row justify-content-center align-items-center">
                                     <div class="col-lg-4 text-center"><a href="registration.php">Don't have an account? Click here to register</a></div>
