@@ -15,12 +15,13 @@ $conn->select_db($dbname);
 $conn->query("CREATE TABLE IF NOT EXISTS users (
                 ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 `name` VARCHAR(255) not null,
-                age VARCHAR(255) not null,                
+                age INT(11) not null,                
                 email VARCHAR(255) not null,
                 `password` VARCHAR(50) not null,
                 `weight` VARCHAR(255) NOT NULL,
-                height VARCHAR(50),
-                regimen VARCHAR(50),
+                height float,
+                BMI float,
+                regimen INT(11),
                 preferences VARCHAR(255),
                 gender VARCHAR(255),
                 UNIQUE (Email)
@@ -29,11 +30,16 @@ $conn->query("CREATE TABLE IF NOT EXISTS users (
 
 if(isset($_POST["register"])){
 
+    //change height to meters
+    $heightMeters = $_POST['height']/100;
+
     $name=$_POST['name'];
     $age=$_POST['age'];
     $email=$_POST['email'];
     $weight=$_POST['weight'];
     $height=$_POST['height'];
+    //BMI Calculation
+    $BMI = $_POST['weight']/($heightMeters*$heightMeters);
     $regimen=$_POST['regimen'];
     $gender=$_POST['gender'];
     $preferences=$_POST['preferences'];
@@ -43,8 +49,8 @@ if(isset($_POST["register"])){
     // Compares passwords
     if($password === $confirmPassword){
         $password=md5($password);
-        $insert_sql = "INSERT INTO users (`name`, `age`, `email`, `password`, `weight`, `height`, `regimen`, `preferences`, `gender`)
-                    VALUES ('$name', '$age', '$email','$password','$weight', '$height', '$regimen', '$preferences', '$gender')";
+        $insert_sql = "INSERT INTO users (`name`, `age`, `email`, `password`, `weight`, `height`, `BMI`,`regimen`, `preferences`, `gender`)
+                    VALUES ('$name', '$age', '$email','$password','$weight', '$height', '$BMI', '$regimen','$preferences', '$gender')";
         if($conn->query($insert_sql)===true){
         echo '<script type="text/javascript">';
         echo ' alert("Your account has been registered. You may login now.")';  //not showing an alert box.
