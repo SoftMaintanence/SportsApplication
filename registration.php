@@ -13,18 +13,19 @@ $conn->query("CREATE DATABASE IF NOT EXISTS $dbname");
 $conn->select_db($dbname);
 
 $conn->query("CREATE TABLE IF NOT EXISTS users (
-                ID INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 `name` VARCHAR(255) not null,
                 age INT(11) not null,                
                 email VARCHAR(255) not null,
-                `password` VARCHAR(100) not null,
-                `weight` VARCHAR(255) NOT NULL,
+                `password` VARCHAR(255) not null,
+                `weight` float,
+                IdealWeight float,
+                CurrentWeight float,
                 height float,
                 BMI float,
                 regimen INT(11),
                 preferences VARCHAR(255),
                 gender VARCHAR(255),
-                UNIQUE (email)
+                UNIQUE (Email)
             )");
             
 
