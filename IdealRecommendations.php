@@ -3,7 +3,7 @@
 include "connectDB.php";
 
 //Connect to sportsdb table
-$sql = "SELECT name, age, regimen, BMI, weight FROM users WHERE name = '$user_check'";
+$sql = "SELECT name, age, regimen, BMI, weight, IdealWeight, CurrentWeight FROM users WHERE name = '$user_check'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -16,6 +16,13 @@ $conn->close();
 $BMI = $row["BMI"];
 $regimenType = $row["regimen"];
 $Age = $row["age"];
+$ideals = $row["IdealWeight"];
+$Regweight = $row["weight"];
+$currentweight = $row["CurrentWeight"];
+//percentage of progress
+$goal = $row["weight"]-$row["IdealWeight"];
+$loss = $row["weight"]-$currentweight;
+$percentage = round(($loss/$goal)*100);
 
 //status variables
 $BMIstatus = 0;

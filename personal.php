@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<?php include "IdealRecommendations.php";?>
-
 <head>
 
     <title>Gymso Fitness HTML Template</title>
@@ -19,6 +16,68 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    
+
+    <script>
+
+    // Script to open and close sidebar
+     function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+            }
+    
+    </script>
+
+<?php
+
+include "IdealRecommendations.php";
+include "connectDB.php";
+
+//Update Ideal Weight and Current Weight
+if(isset($_POST['submit'])){ //check if form was submitted
+    $ideal = $_POST['ideal']; 
+    $current = $_POST['current'];
+    $start = $_POST['start'];
+
+
+
+    if($ideal && $current && $start ){
+    $sql = "UPDATE users SET CurrentWeight='$current', IdealWeight='$ideal' , weight='$start' WHERE name='$user_check'";
+
+    // Prepare statement
+    $stmt = $conn->prepare($sql);
+
+    // execute the query
+    $stmt->execute();
+
+    }
+    else if($ideal){
+        $sql = "UPDATE users SET IdealWeight='$ideal' WHERE name='$user_check'";
+
+        // Prepare statement
+        $stmt = $conn->prepare($sql);
+    
+        // execute the query
+        $stmt->execute();
+    }
+    else if($current){
+        $sql = "UPDATE users SET CurrentWeight='$current' WHERE name='$user_check'";
+
+        // Prepare statement
+        $stmt = $conn->prepare($sql);
+    
+        // execute the query
+        $stmt->execute();
+    }
+
+    header("Refresh:0");
+  }  
+?>
+
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
@@ -32,6 +91,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
     .w3-bar-block .w3-bar-item {
         padding: 20px
     }
+
 </style>
 
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50" >
@@ -49,17 +109,6 @@ https://www.tooplate.com/view/2119-gymso-fitness
         </nav>
 
         <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-
-        <script>
-            // Script to open and close sidebar
-            function w3_open() {
-                document.getElementById("mySidebar").style.display = "block";
-            }
-
-            function w3_close() {
-                document.getElementById("mySidebar").style.display = "none";
-            }
-        </script>
 
         <div class="container">
 
@@ -82,44 +131,39 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
                     <h2 class="text-white" data-aos="fade-up" data-aos-delay="600">Let's reach those milestones!</h2>
 
-                    <h3 class="text-white" data-aos="fade-up" data-aos-delay="600">75 KG!</h3>
+                    <h3 class="text-white" data-aos="fade-up" data-aos-delay="600">Starting Weight : <?php echo $Regweight; ?> KG</h3>
 
-                    <div class="w3-light-grey" data-aos="fade-up" data-aos-delay="600">
-                        <div id="myBar" class="w3-green" style="height:24px;width:0;"></div>
-                    </div>
+                    <h3 class="text-white" data-aos="fade-up" data-aos-delay="600">Current Weight : <?php echo $currentweight; ?> KG</h3>
+
+                    <h3 class="text-white" data-aos="fade-up" data-aos-delay="600">Ideal Weight : <?php echo $ideals; ?> KG</h3>
+
+                    <div class="progress" style= "height: 32px;">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                    aria-valuenow="<?php echo $percentage ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $percentage ?>%">
+                    <?php echo $percentage ?>%
+                     </div>
 
                     <div class="InputUser" data-aos="fade-up" data-aos-delay="600">
                         <h2 class="text-white" data-aos="fade-up" data-aos-delay="600">Let's update your weight!</h2>
+                        <form action=" " method="post">
+                        <!-- Starting Weight -->
+                        <label for="fname" class="text-white">New Starting Weight</label>
+                        <input type="number" id="start" name="start" style="max-width: 35px;">
+                        <label for="fname" class="text-white"> KG</label>
+                         &nbsp;
                         <!-- Ideal Weight -->
-                        <label for="fname" class="text-white">Ideal Weight</label>
+                        <label for="fname" class="text-white">New Ideal Weight</label>
                         <input type="number" id="ideal" name="ideal" style="max-width: 35px;">
                         <label for="fname" class="text-white"> KG</label>
                          &nbsp;
                         <!-- Cuurent Weight -->
-                        <label for="fname" class="text-white">Current Weight</label>
+                        <label for="fname" class="text-white">New Current Weight</label>
                         <input type="number" id="current" name="current" style="max-width: 35px;">
                         <label for="fname" class="text-white"> KG</label>
                         <br></br>
-                        <button class="w3-button w3-green" onclick="move()">Update</button>
+                        <button type="submit" name="submit"  class="btn btn-success" value="submit" onclick="show();" >Update</button>
+                        </form>
                     </div>
-
-
-                    <script>
-                        function move() {
-                            var elem = document.getElementById("myBar");
-                            var width = 20;
-                            var id = setInterval(frame, 10);
-                            function frame() {
-                                if (width >= 100) {
-                                    clearInterval(id);
-                                } else {
-                                    width++;
-                                    elem.style.width = width + '%';
-                                    elem.innerHTML = width * 1 + '%';
-                                }
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </div>
@@ -251,6 +295,8 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
     <!-- SCRIPTS -->
     <script src="js/jquery-3.2.1.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--jquery file-->
     <script src="js/bootstrap.js" charset="utf-8"></script>
     <!--bootstrap js file-->
