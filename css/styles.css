@@ -116,7 +116,7 @@ section#intro{
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   font-size: 2.8em;
 }
-button.join-community-btn{
+#intro button.join-community-btn{
   background-color: #2A8BF2;
   color: white;
   text-align: center;
@@ -346,16 +346,18 @@ div.content#weather{
 /*--End carousel----*/
 
 /*=====END EVENTS & WEATHER=====*/
+/*=====MAP INFO=====*/
 section#mapinfo{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   height: 100%;
+  width: 100%;
 }
 
 section#mapinfo .row{
   height:100%;
-  padding: 0;
   max-width: 90%;
-  margin-left: 5em;
+  max-width: 90%;
+  margin:auto;
 }
 section#mapinfo .row .cols{
   height:100%;
@@ -365,85 +367,89 @@ section#mapinfo .row .cols{
 section#mapinfo .row .cols#info{
   height: 50%;
   max-height: 60%;
-
 }
 section#mapinfo .row .cols .mapinfo{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  display:block;
+  justify-content:left;
+  justify-items: left;
+  align-items: left;
   height:50px;
   color:#004084;
-  /*background-color:#C2FFFF;*/
-  /*border:1px solid #004960;*/
   cursor: pointer;
 }
 #routeresult{
   max-height: 80%;
   display: none;
-  text-align: center;
+  text-align:left;
   overflow-x: scroll;
-  /*border-right: 1px solid black;
-  border-left: 1px solid black;*/
-  padding: 5%;
-}
-div#routeresult div.row{
-  padding: 0;
-  margin: 0;
-
-}
-div#facilityresult div.row{
-  padding: 0;
-  margin: 0;
 }
 #facilityresult{
   max-height: 90%;
   display: none;
-  text-align: center;
+  text-align: left;
   overflow-x: scroll;
-  /*border-right: 1px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;*/
-  padding: 5%;
+  margin-left: 1em;
 }
 section#mapinfo .row #map{
   height:70%;
-  width:70%;
-  margin-left: 10em;
+  width:80%;
+  /* margin-left: 10em; */
 }
-div #info .cols{
 
+div #info .cols{
   padding-top: 60px;
 }
 
 section#mapinfo div#mapresult{
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 section#mapinfo .row .cols #mapresult .row{
-  margin: 0;
+  margin: 0px;
   padding: 0px;
 }
 
 section#mapinfo .row .cols .mapinfo#routes,
 section#mapinfo .row .cols .mapinfo#facilities p{
   font-size: 24px;
-  text-align: center;
-
+  text-align: left;
+  margin-left: 2.3em;
 }
 
 section#mapinfo .row .cols #mapresult .name{
   padding-left: 0;
-  /*border-right: 1px solid black;
-  border-left: 1px solid black;*/
   overflow: hidden;
 }
 section#mapinfo .row .cols #routeresult .name{
-  padding-left: 10px;
+  margin-left: 7.5em;
 }
 section#mapinfo .row .cols #routeresult .row{
   overflow: hidden;
   height:auto;
 }
+
+#join-btn{
+  margin-left: 4em;
+  margin-top: 20px;
+}
+#join-btn button.join-community-btn{
+  background-color: #2A8BF2;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  /* max-width: 50%; */
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-style: hidden;
+}
+
 section#mapinfo .attr p{
   color:#004084;
   font-weight: bold;
@@ -456,7 +462,6 @@ section#mapinfo  .name p{
 }
 section #info{
   padding-top: 25%;
-
 }
 
 @media only screen and (max-width: 993px) {
