@@ -1,17 +1,71 @@
+*{
+  /*To avoid horizontal scroll*/
+  max-width: 100%;
+  font-family: "Arial", "Halevetica", sans-serif;
+}
+html,body{
+  /* remove padding and margin on body and give it total height*/
+  margin: 0;
+  padding:0;
+  height:100%;
+  width: 100%;
+  background-color: #F3F3FB;
+}
+
+section#header{
+  height: 50%;
+  padding: 5% 10% 5% 10%;
+}
+
+.info h1{
+  font-size: 82px;
+}
+
+section#menu-bar{
+  background-color: #F3F3FB;
+  height: fit-content;
+  text-align: center;
+}
+#menu-bar .menu{
+  width: 80%;
+  margin: auto;
+}
+#menu-bar .badminton-page,
+#menu-bar .hockey-page,
+#menu-bar .squash-page,
+#menu-bar .teakwondo-page{
+  background-color: #F3F3FB;
+  box-sizing: border-box;
+  border-style: hidden;
+  font-size: 18px;
+  width: 24%;
+
+  padding: 8px;
+}
+#menu-bar .badminton-page:hover,
+#menu-bar .hockey-page:hover,
+#menu-bar .squash-page:hover,
+#menu-bar .teakwondo-page:hover{
+  background-color: #0095CA;
+  color: #F3F3FB;
+  font-weight: bold;
+}
+
+
 .header{
-	background-color: white;
 	padding: 5% 10% 5% 10%;
 	margin-left: 5em;
 	color: #004960;
-	height: 35em;
+	height: 35em; 
+}
 
+.container-fluid{
+  background-color: #ffffff;
 }
 
 .header h1{
 	font-size: 5em;
-
 	text-align: left;
-
 }
 
 #logo{
@@ -142,7 +196,6 @@ footer{
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
-
   }
 
   #diva h1{
@@ -163,7 +216,6 @@ footer{
     margin-left: 5%;
     align-content: center;
     margin-top: 0em;
-
   }
 
   #diva form{
@@ -171,12 +223,10 @@ footer{
   }
 
   #diva form input{
-
     height: 2em;
   }
 
   #diva form button{
-
     height: 2em;
   }
 }
