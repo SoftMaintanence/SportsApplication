@@ -59,50 +59,171 @@
           <!--JUICE #1-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <a href="beetroot.html"><img src="images/beetroot_juice.jpg" alt="beetroot" class="image" style="width:100%"></a>
+              <img src="images/beetroot_juice.jpg" alt="beetroot" class="image" style="width:100%">
               <h3>Beetroot Juice</h3>
               <p>Contains nitrate which improves exercise performance. Converted into nitrate oxide in the body, it improves blood circulation and increases muscle contradiction.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="beetroot.html">Read Recipe</a>
+                <button id="btn-beetroot-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="beetroot-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-beetroot" class="recipe-full">
+                          <h3>Beetroot juice recipe</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/beetroot_juice.jpg" alt="beetroot">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 1 beetroot, peeled and chopped</i></h6>
+                            <h6><i>- 1 tablespoon of lime juice</i></h6>
+                            <h6><i>- A pinch of pink Himalayan salt</i></h6>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-beetroot')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
               </div>
             </div>
-          </div>
           <!--JUICE #2-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <a href="chiaberry.html"><img src="images/chia_berry.jpg" alt="chia" class="image" style="width:100%"></a>
-              <h3>Chia Berry Smoothie</h3>
+              <img src="images/chia_berry.jpg" alt="chia" class="image" style="width:100%">
+              <h3>Chia Berry Juice</h3>
               <p>Drinking this before exercising can help surpress post-exercise muscle fatigue, as berries are a natural source of antioxidants. The chia seeds added are a good source of dietary fibre and protein.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="chiaberry.html">Read Recipe</a>
+                <button id="btn-chiaberry-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="chiaberry-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-chiaberry" class="recipe-full">
+                          <h3>Chia Berry recipe</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/chia_berry.jpg" alt="chiaberry">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 1/2 cup strawberry</i></h6>
+                            <h6><i>- 1/2 cup blueberries</i></h6>
+                            <h6><i>- A handful of mint leaves</i></h6>
+                            <h6><i>- 1 teaspoon of honey</i></h6>
+                            <h6><i>- 1 teaspoon of chia seeds</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Blend the raspberries, blueberries and mint leaves until liquified and put it in serving container of choice. Add the honey and chia seeds and stir well to finish.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-chiaberry')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
               </div>
             </div>
-          </div>
           <!--JUICE #3-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <a href="pomegranate.html"><img src="images/pomegranate_passion.jpg" alt="passion" class="image" style="width:100%"></a>
+              <img src="images/pomegranate_passion.jpg" alt="passion" class="image" style="width:100%">
               <h3>Pomegranate Passion</h3>
               <p>Pomegranate juice has lots of vitamins that can help exercise performance and post-exercise recovery.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="pomegranate.html">Read Recipe</a>
-              </div>
+                <button id="btn-p-passion-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="p-passion-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-p-passion" class="recipe-full">
+                          <h3>Pomegranate Passion</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/pomegranate_passion.jpg" alt="pomegranate passion">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 1/2 cup pomegranate</i></h6>
+                            <h6><i>- 2 tablespoons passionfruit pulp</i></h6>
+                            <h6><i>- 1 teaspoon of honey</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Blend the pomegranate and passionfruit pulp until liquified and put it in serving container of choice. Add the honey and stir well to finish.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-p-passion')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
             </div>
           </div>
           <!--JUICE #4-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <a href="bananaapple.html"><img src="images/banana_apple.jpg" alt="banana" class="image" style="width:100%"></a>
+              <img src="images/banana_apple.jpg" alt="banana" class="image" style="width:100%">
               <h3>Banana Apple Juice</h3>
               <p>Not only does the banana contain lots of vitamins and minerals, it also contains high energy carbs to provide energy that can improve exercise performance. The apple also have lots of vitamins and a revitalizing, cooling quality.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="bananaapple.html">Read Recipe</a>
-              </div>
+                <button id="btn-bananaapple-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="bananaapple-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-bananaapple" class="recipe-full">
+                          <h3>Pomegranate Passion</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/banana_apple.jpg" alt="banana apple">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 2 large bananas</i></h6>
+                            <h6><i>- 1/2 cup chopped apple</i></h6>
+                            <h6><i>- 1 tablespoon of honey</i></h6>
+                            <h6><i>- 1/2 cup milk or water</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Wash the bananas and pat them dry. Peel the bananas and apple and cut them into sizable chunks. Blend the fruit chunks in a blender along with milk or water. If the mixture is too thick, add more milk or water. Serve when finished.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-bananaapple')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section><!--END-->
 
     <footer>
           <div class="container-fluid" id="diva">
@@ -130,7 +251,86 @@
 
       </footer>
 
-
+    <script>
+      //BEETROOT
+      // Get the modal
+      var beetroot_modal = document.getElementById("beetroot-modal");
+      // Get the button that opens the modal
+      var beetroot_btn = document.getElementById("btn-beetroot-recipe");
+      
+      //CHIABERRY
+      // Get the modal
+      var chiaberry_modal = document.getElementById("chiaberry-modal");
+      // Get the button that opens the modal
+      var chiaberry_btn = document.getElementById("btn-chiaberry-recipe");
+      
+      //POMEGRANATE PASSION
+      // Get the modal
+      var p_passion_modal = document.getElementById("p-passion-modal");
+      // Get the button that opens the modal
+      var p_passion_btn = document.getElementById("btn-p-passion-recipe");
+      
+      //BANANA APPLE
+      // Get the modal
+      var bananaapple_modal = document.getElementById("bananaapple-modal");
+      // Get the button that opens the modal
+      var bananaapple_btn = document.getElementById("btn-bananaapple-recipe");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks on the button, open the modal 
+      beetroot_btn.onclick = function() {
+        beetroot_modal.style.display = "block";
+      }
+      chiaberry_btn.onclick = function() {
+        chiaberry_modal.style.display = "block";
+      }
+      p_passion_btn.onclick = function() {
+        p_passion_modal.style.display = "block";
+      }
+      bananaapple_btn.onclick = function() {
+        bananaapple_modal.style.display = "block";
+      }
+    
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        if (event.target == beetroot_modal) {
+          beetroot_modal.style.display = "none";
+        }
+        if (event.target == chiaberry_modal) {
+          chiaberry_modal.style.display = "none";
+        }
+        if (event.target == p_passion_modal) {
+          p_passion_modal.style.display = "none";
+        }
+        if (event.target == bananaapple_modal) {
+          bananaapple_modal.style.display = "none";
+        }
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == beetroot_modal) {
+          beetroot_modal.style.display = "none";
+        }
+        if (event.target == chiaberry_modal) {
+          chiaberry_modal.style.display = "none";
+        }
+        if (event.target == p_passion_modal) {
+          p_passion_modal.style.display = "none";
+        }
+        if (event.target == bananaapple_modal) {
+          bananaapple_modal.style.display = "none";
+        }
+      }
+      function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+      }
+    </script>
   <!-- JavaScripts file -->
   <script src="js/jquery-3.2.1.js" charset="utf-8"></script><!--jquery file-->
   <script src="js/bootstrap.js" charset="utf-8"></script><!--bootstrap js file-->

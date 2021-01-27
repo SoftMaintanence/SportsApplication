@@ -116,7 +116,7 @@ section#workout-title{
 	float: left;
 }
 .content{
-	height: 500px;
+	height: 520px;
 	box-sizing: border-box;
 	border-radius: 10px;
 	border-style: hidden;
@@ -128,7 +128,6 @@ section#workout-title{
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .content img{
-  /* width: 100%; */
   height: 250px;
   object-fit: cover;
   object-position: 50 50%;
@@ -152,28 +151,146 @@ section#workout-title{
   color: #006F94;
   font-weight: bold;
 	padding: 0;
-	margin: 0px;
+  margin: 0px;
 }
-/* 
-.pre-work img{
-  height: 150px;
+/*START*/
+.read-recipe{
+  margin: auto;
+	padding: 0;
+  margin: 0px;
+}
+/*BUTTON*/
+#btn-beetroot-recipe,
+#btn-chiaberry-recipe,
+#btn-p-passion-recipe,
+#btn-bananaapple-recipe,
+#btn-coconut-recipe,
+#btn-cherrylemon-recipe,
+#btn-watermelon-recipe,
+#btn-peanutbanana-recipe{
+  background-color:#004960;
+  color:#F3F3FB;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 5px;
   width: 250px;
-  margin-bottom: 30px;
-
 }
-.pre-work h1{
-  padding-top: 1em;
-  margin-bottom: 1em;
-  font-family: 'Quicksand', sans-serif;
+#btn-beetroot-recipe:hover,
+#btn-chiaberry-recipe:hover,
+#btn-p-passion-recipe:hover,
+#btn-bananaapple-recipe:hover,
+#btn-coconut-recipe:hover,
+#btn-cherrylemon-recipe:hover,
+#btn-watermelon-recipe:hover,
+#btn-peanutbanana-recipe:hover{
+  background-color:#0095CA;
+  color:#F3F3FB;
   font-weight: bold;
 }
-.post-work h1{
-  margin-top: 2em;
-  margin-bottom: 1em;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
 
-} */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+  height: fit-content;
+}
+.recipe-full{
+  width: 90%;
+  margin: auto;
+  padding: auto;
+}
+.recipe-info{
+  padding-bottom: 20px;
+}
+.preparation-info{
+  margin-top: 15px;
+}
+.preparation{
+  margin-top: 15px;
+  background-color: #F3F3FB;
+  height: max-content;
+}
+.preparation h4{
+  font-size: 21px;
+}
+.preparation p{
+  font-size: 18px;
+  padding: 10px;
+  height: max-content;
+}
+
+.print-recipe{
+  width: 40%;
+  margin: auto;
+  align-content: center;
+}
+.print-recipe input[type=button]{
+  background-color: #004960;
+  color: #F3F3FB;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-style: hidden;
+  padding: 5px;
+  width: 100%;
+}
+.modal-content img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: 50 50%;
+}
+.modal-content h3{
+  margin: auto;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+.modal-content h4{
+  margin: auto;
+  font-size: 28px;
+  padding: 10px;
+}
+.modal-content h6{
+  margin: auto;
+  font-size: 21px;
+}
+
+
+/* The Close Button */
+.close {
+  color: #006F94;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*END*/
 @-webkit-keyframes move {
   }
   @-webkit-keyframes appear {

@@ -40,7 +40,7 @@
   <!--MENU BAR-->
 	<section id="menu-bar">
 		<div class="menu">
-		<a href="dietetics.html" id="preworkout-page" class="preworkout-page">PRE-WORKOUT DRINKS</a>
+		<a href="dietetics.html" id="postworkout-page" class="preworkout-page">PRE-WORKOUT DRINKS</a>
 		<a href="postworkout-dietetics.html" id="postworkout-page" class="postworkout-page">POST-WORKOUT DRINKS</a>
 		</div>
 	</section>
@@ -48,63 +48,187 @@
   <!--DIETETICS-->
   <section id="dietetics">
 
-  <!--PRE-WORKOUT-->
+  <!--POST-WORKOUT-->
   <section id="workout-title">
     <h1 id="postworkout-page"><b>POST-WORKOUT</b></h1>
   </section>
-    <section id="postworkout-page" class="preworkout-page">
-		  <!-- <h1 id="preworkout-page"><b>PRE-WORKOUT</b></h1> -->
+    <section id="postworkout-page" class="postworkout-page">
+		  <!-- <h1 id="postworkout-page"><b>POST-WORKOUT</b></h1> -->
 		  <div class="container-fluid">
 			  <div class="row">
           <!--JUICE #1-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <a href="coconut.html"><img src="images/coconut_juice.jpg" alt="coconut" class="image" style="width:100%"></a>
-              <h3>Coconut Water</h3>
-              <p>A natural electrolyte that can help replenish lost salts and balances electrolyte concentration in the body. It is also an effective hydrator for the body.</p>
+              <img src="images/coconut_juice.jpg" alt="coconut" class="image" style="width:100%">
+              <h3>Coconut Juice</h3>
+              <p>Contains nitrate which improves exercise performance. Converted into nitrate oxide in the body, it improves blood circulation and increases muscle contradiction.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="coconut.html">Read Recipe</a>
+                <button id="btn-coconut-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="coconut-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-coconut" class="recipe-full">
+                          <h3>Coconut Juice Recipe</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/coconut_juice.jpg" alt="coconut">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 300ml coconut water</i></h6>
+                            <h6><i>- 2 tablespoons chopped coconut</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Add chopped coconut into the coconut juice. Refrigerate it before serving.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-coconut')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
               </div>
             </div>
-          </div>
           <!--JUICE #2-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <a href="cherrylemon.html"><img src="images/cherry_lemonade.jpg" alt="cherry" class="image" style="width:100%"></a>
-              <h3>Cherry Lemonade</h3>
+              <img src="images/cherry_lemonade.jpg" alt="cherry lemon" class="image" style="width:100%">
+              <h3>Cherry Lemon Juice</h3>
               <p>The natural antioxidant and anti-inflammatory qualities of cherries can relief post-exercise injury and can lead to a much faster muscle recovery. The lemons in lemonade can provide Vitamin C for a good immune system and prevent illness.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="cherrylemon.html">Read Recipe</a>
+                <button id="btn-cherrylemon-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="cherrylemon-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-cherrylemon" class="recipe-full">
+                          <h3>Cherry Lemon Recipe</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/cherry_lemonade.jpg" alt="cherrylemon">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 1/2 cup chopped cherries</i></h6>
+                            <h6><i>- 1/2 cup lime juice</i></h6>
+                            <h6><i>- 1 teaspoon of honey</i></h6>
+                            <h6><i>- 1/4 teaspoon fennel seed powder</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Blend the chopped cherries and a little water into a blender. Pour it into a glass and add honey, lime juice and fennel seed powder. Mix well and serve.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-cherrylemon')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
               </div>
             </div>
-          </div>
           <!--JUICE #3-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <!-- <h3><b>Beetroot Juice</b></h3> -->
-              <a href="watermelon.html"><img src="images/watermelon_energizer.jpg" alt="passion" class="image" style="width:100%"></a>
+              <img src="images/watermelon_energizer.jpg" alt="passion" class="image" style="width:100%">
               <h3>Watermelon Energizer</h3>
               <p>The drink is full of natural sugars and potent with Vitamin A and C. Not only that, it is also an electrolyte balancer, which can help in post-exercise recovery.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="watermelon.html">Read Recipe</a>
-              </div>
+                <button id="btn-watermelon-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="watermelon-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-watermelon" class="recipe-full">
+                          <h3>Watermelon Energizer Recipe</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/watermelon_energizer.jpg" alt="watermelon energizer">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 1 cup watermelon</i></h6>
+                            <h6><i>- 1 cup coconut water</i></h6>
+                            <h6><i>- A pinch of pink Himalayan salt</i></h6>
+                            <h6><i>- 1 tablespoon of lime juice</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Blend the watermelon into a blender and strain the seeds. Pour it into a glass and add coconut juice, lime juice and pink Himalayan salt. Mix well and serve.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-watermelon')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
             </div>
           </div>
           <!--JUICE #4-->
           <div class="col-md-3 col-sm-12 bg-1">
             <div class="content">
-              <!-- <h3><b>Beetroot Juice</b></h3> -->
-              <a href="peanutbanana.html"><img src="images/peanut_banana.jpg" alt="peanut" class="image" style="width:100%"></a>
+              <img src="images/peanut_banana.jpg" alt="banana" class="image" style="width:100%">
               <h3>Peanut Butter Banana</h3>
-              <p>Not only does the banana contain lots of vitamins and minerals, it also contains high energy carbs to provide energy after a long workout. Adding in the peanuts can provide more energy replenishment.</p>
+              <p>Not only does the banana contain lots of vitamins and minerals, it also contains high energy carbs to provide energy that can improve exercise performance. The apple also have lots of vitamins and a revitalizing, cooling quality.</p>
+              <!--READ RECIPE-->
               <div class="read-recipe">
-                <a href="peanutbanana.html">Read Recipe</a>
-              </div>
+                <button id="btn-peanutbanana-recipe">Read Recipe</button>
+                <!-- The Modal -->
+                <div id="peanutbanana-modal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div id="printableArea-peanutbanana" class="recipe-full">
+                          <h3>Peanute Butter Banana Recipe</h3><br>
+                          <!--PHOTO-->
+                          <div class="recipe-img">
+                            <img src="images/peanut_banana.jpg" alt="banana apple">
+                          </div>
+                          <!--RECIPE-->
+                          <div class="recipe-info">
+                            <h4><b>Ingredients</b></h4>
+                            <h6><i>- 2 large bananas</i></h6>
+                            <h6><i>- 1/2 cup chopped apple</i></h6>
+                            <h6><i>- 1 tablespoon of honey</i></h6>
+                            <h6><i>- 1/2 cup milk or water</i></h6>
+                            <div class="prep-info">
+                              <div class="preparation">
+                                <h4><strong>Preparation</strong> </h4>
+                                <p>Wash the bananas and pat them dry. Peel the bananas and apple and cut them into sizable chunks. Blend the fruit chunks in a blender along with milk or water. If the mixture is too thick, add more milk or water. Serve when finished.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="print-recipe">
+                        <input id="print-recipe-btn" type="button" onclick="printDiv('printableArea-peanutbanana')" value="PRINT THIS RECIPE" />
+                        </div>
+                    </div>
+                  </div>
+                </div><!--END READ RECIPE-->
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section><!--END-->
 
     <footer>
           <div class="container-fluid" id="diva">
@@ -118,21 +242,95 @@
             </div>
           </form>
           <div class="row">
-
               <div class="socialIcons">
                 <a href="https://www.facebook.com/Sports-Swift-296202374123622"><img src="png/png/facebook1.png" alt=""></a>
                 <a href="https://twitter.com/sportswift2017"><img src="png/png/twitter1.png" alt=""></a>
                 <a href="https://www.instagram.com/sport.swift/"><img src="png/png/instagram1.png" alt=""></a>
               </div>
-
             </div>
-
           </div>
-
-
       </footer>
 
-
+    <script>
+      //COCONUT
+      // Get the modal
+      var coconut_modal = document.getElementById("coconut-modal");
+      // Get the button that opens the modal
+      var coconut_btn = document.getElementById("btn-coconut-recipe");
+      
+      //CHERRYLEMON
+      // Get the modal
+      var cherrylemon_modal = document.getElementById("cherrylemon-modal");
+      // Get the button that opens the modal
+      var cherrylemon_btn = document.getElementById("btn-cherrylemon-recipe");
+      
+      //WATERMELON PASSION
+      // Get the modal
+      var watermelon_modal = document.getElementById("watermelon-modal");
+      // Get the button that opens the modal
+      var watermelon_btn = document.getElementById("btn-watermelon-recipe");
+      
+      //PEANUT BUTTER BANANA
+      // Get the modal
+      var peanutbanana_modal = document.getElementById("peanutbanana-modal");
+      // Get the button that opens the modal
+      var peanutbanana_btn = document.getElementById("btn-peanutbanana-recipe");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks on the button, open the modal 
+      coconut_btn.onclick = function() {
+        coconut_modal.style.display = "block";
+      }
+      cherrylemon_btn.onclick = function() {
+        cherrylemon_modal.style.display = "block";
+      }
+      watermelon_btn.onclick = function() {
+        watermelon_modal.style.display = "block";
+      }
+      peanutbanana_btn.onclick = function() {
+        peanutbanana_modal.style.display = "block";
+      }
+    
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        if (event.target == coconut_modal) {
+          coconut_modal.style.display = "none";
+        }
+        if (event.target == cherrylemon_modal) {
+          cherrylemon_modal.style.display = "none";
+        }
+        if (event.target == watermelon_modal) {
+          watermelon_modal.style.display = "none";
+        }
+        if (event.target == peanutbanana_modal) {
+          peanutbanana_modal.style.display = "none";
+        }
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == coconut_modal) {
+          coconut_modal.style.display = "none";
+        }
+        if (event.target == cherrylemon_modal) {
+          cherrylemon_modal.style.display = "none";
+        }
+        if (event.target == watermelon_modal) {
+          watermelon_modal.style.display = "none";
+        }
+        if (event.target == peanutbanana_modal) {
+          peanutbanana_modal.style.display = "none";
+        }
+      }
+      function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+      }
+    </script>
   <!-- JavaScripts file -->
   <script src="js/jquery-3.2.1.js" charset="utf-8"></script><!--jquery file-->
   <script src="js/bootstrap.js" charset="utf-8"></script><!--bootstrap js file-->
