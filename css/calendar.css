@@ -13,12 +13,28 @@ html,body{
 }
 
 section#header{
-  height: 50%;
+  height: 80%;
   padding: 5% 10% 5% 10%;
+  background: url(images/running-track.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: center;
+
+  background-color: rgba(76, 73, 88, 0.356);
+  background-blend-mode: multiply;
 }
 
 .info h1{
-  font-size: 82px;
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 10em;
+}
+
+.info p{
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.92em;
 }
 
 section#menu-bar{
@@ -33,7 +49,7 @@ section#menu-bar{
 #menu-bar .badminton-page,
 #menu-bar .hockey-page,
 #menu-bar .squash-page,
-#menu-bar .teakwondo-page{
+#menu-bar .taekwondo-page{
   background-color: #F3F3FB;
   box-sizing: border-box;
   border-style: hidden;
@@ -45,7 +61,7 @@ section#menu-bar{
 #menu-bar .badminton-page:hover,
 #menu-bar .hockey-page:hover,
 #menu-bar .squash-page:hover,
-#menu-bar .teakwondo-page:hover{
+#menu-bar .taekwondo-page:hover{
   background-color: #0095CA;
   color: #F3F3FB;
   font-weight: bold;
