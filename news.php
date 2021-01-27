@@ -73,30 +73,50 @@ https://www.tooplate.com/view/2119-gymso-fitness
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50" >
 
     <!-- MENU BAR -->
+ <!-- MENU BAR -->
+
     <nav class="navbar navbar-expand-lg fixed-top">
 
-        <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
-            style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
-            <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
-            <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Personalised Recommendation</a>
-            <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
 
-        </nav>
 
-        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+
+
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+
+     style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+
+    <a href="calender.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+
+    <a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
+
+    <a href="personal.html" onclick="w3_close()" class="w3-bar-item w3-button">Personalised Recommendation</a>
+
+    </nav>
+
+
+
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><img src="images/logo.png" alt="☰" width="30" height="30"></div>
+
+
 
         <div class="container">
 
-            <a class="navbar-brand" href="">Personalised</a>
+
+
+            <a class="navbar-brand" href="#">News</a>
+
+
 
         </div>
 
 
-    </nav>
 
+
+    </nav>
 
     <!-- The Main Page -->
     <section class="hero" id="home">
@@ -207,7 +227,11 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
         </div>
     </section>
+        <footer class="site-footer" style="color:#000099; text-align: center;"  >
 
+                <p>Software Maintenance, All Rights Reserved (C)</p>
+
+        </footer>
     <!-- SCRIPTS -->
     <script src="js/jquery-3.2.1.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
