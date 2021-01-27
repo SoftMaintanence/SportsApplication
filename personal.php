@@ -48,30 +48,19 @@ if(isset($_POST['submit'])){ //check if form was submitted
     if($ideal && $current && $start ){
     $sql = "UPDATE users SET CurrentWeight='$current', IdealWeight='$ideal' , weight='$start' WHERE name='$user_check'";
 
-    // Prepare statement
-    $stmt = $conn->prepare($sql);
-
-    // execute the query
-    $stmt->execute();
+    $conn->query($sql) === TRUE;
+     
 
     }
     else if($ideal){
         $sql = "UPDATE users SET IdealWeight='$ideal' WHERE name='$user_check'";
 
-        // Prepare statement
-        $stmt = $conn->prepare($sql);
-    
-        // execute the query
-        $stmt->execute();
+        $conn->query($sql) === TRUE;
     }
     else if($current){
         $sql = "UPDATE users SET CurrentWeight='$current' WHERE name='$user_check'";
 
-        // Prepare statement
-        $stmt = $conn->prepare($sql);
-    
-        // execute the query
-        $stmt->execute();
+        $conn->query($sql) === TRUE;
     }
 
     header("Refresh:0");
@@ -99,16 +88,17 @@ https://www.tooplate.com/view/2119-gymso-fitness
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
 
-        <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
-            style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
-            <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
-            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
-            <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Personalised Recommendation</a>
-        </nav>
+        
+    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+     style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="calender.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+    <a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
+    <a href="personal.html" onclick="w3_close()" class="w3-bar-item w3-button">Personalised Recommendation</a>
+    </nav>
 
-        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><img src="images/logo.png" alt="☰" width="30" height="30"></div>
 
         <div class="container">
 
@@ -169,20 +159,20 @@ https://www.tooplate.com/view/2119-gymso-fitness
         </div>
     </section>
 
-    <!-- Dietetics -->
+    <!-- Diet Plan -->
     <section class="schedule section" id="schedule">
         <div class="container">
 
             <div class="col-lg-12 col-12 text-center mb-5">
                 <h6 data-aos="fade-up">Healthy Meals to a Healthier You</h6>
 
-                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Dietetics</h2>
+                <h2 class="text-white" data-aos="fade-up" data-aos-delay="200">Diet Plan</h2>
             </div>
 
             <div class="cols" data-aos="fade-up" data-aos-delay="300">
                 <div class="col">
                     <div class="containerCards">
-                        <div class="front" style="background-image: url('./images/Diet/breakfast.jpg')">
+                        <div class="front" style="background-image: url('./images/breakfast.jpg')">
                             <div class="inner">
                                 <p class="text-white">Breakfast</p>
                                 <span>Starting your day the right way</span>
@@ -199,7 +189,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </div>
                 <div class="col">
                     <div class="containerCards">
-                        <div class="front" style="background-image: url('./images/Diet/lunch.jpg')">
+                        <div class="front" style="background-image: url('./images/lunch.jpg')">
                             <div class="inner">
                                 <p class="text-white">Lunch</p>
                                 <span>Don't starve yourself.Eat to Live</span>
@@ -216,7 +206,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </div>
                 <div class="col">
                     <div class="containerCards">
-                        <div class="front" style="background-image: url('./images/Diet/celery.jpg')">
+                        <div class="front" style="background-image: url('./images/celery.jpg')">
                             <div class="inner">
                                 <p class="text-white">Dinner</p>
                                 <span>Dinner ideas that will keep you full through the night</span>
@@ -291,7 +281,11 @@ https://www.tooplate.com/view/2119-gymso-fitness
             </div>
         </div>
     </section>
+<!-- footer put before script -->
 
+<footer class="site-footer" style="color:#000099; text-align: center;"  >
+          <p>Software Maintenance, All Rights Reserved (C)</p>
+</footer>
 
     <!-- SCRIPTS -->
     <script src="js/jquery-3.2.1.js" charset="utf-8"></script>
