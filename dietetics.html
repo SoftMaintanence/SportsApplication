@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sports Switch</title>
+  <title>Sports Swift</title>
+  
+	<link href="images/logo.png" rel="icon">
   <link rel="stylesheet" href="css/bootstrap.css"><!--bootstrap css-->
   <!--stylesheet for mapping-->
   <link rel="stylesheet" href="css/styles.css"><!--custom stylesheet-->
@@ -13,131 +15,97 @@
 
 </head>
 <body >
+	<nav>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">Home</a>
+			<a href="calender.html">Events</a>
+			<a href="dietetics.html">Dietetics</a>
+			<a href="news.html">News</a>
+			<a href="trainingvideos.html">Training</a>
+		</div>
+		<span onclick="openNav()" id="navimage"><img src="images/logo.png"  id="navimage1" alt=""></span>
+	</nav>
+  <!---HEADER-->
+	<section id="header">
+		<div class="row">
+			<!--DIVIDE INTO 2 COLUMNS-->
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<div class="info">
+				<h1>DIETETICS</h1>
+				<p>Boost up your workouts with our pre and post-workout dietetics.</p>
+			</div>
+		</div>
+	</section>
+  <!--MENU BAR-->
+	<section id="menu-bar">
+		<div class="menu">
+		<a href="dietetics.html" id="preworkout-page" class="preworkout-page">PRE-WORKOUT DRINKS</a>
+		<a href="postworkout-dietetics.html" id="postworkout-page" class="postworkout-page">POST-WORKOUT DRINKS</a>
+		</div>
+	</section>
 
+  <!--DIETETICS-->
+  <section id="dietetics">
 
-
-
-  <nav>
-
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">Home</a>
-      <a href="calender.html">Events</a>
-      <a href="dietetics.html">Dietetics</a>
-      <a href="news.html">News</a>
-      <a href="trainingvideos.html">Training</a>
-    </div>
-
-    <span onclick="openNav()" id="navimage"><img src="running-man-1399282_960_720.png" alt=""></span>
-
-  </nav>
-    <section id="dietetics">
-      <div class="row pre-work">
-        <h1>PRE WORKOUT DRINKS</h1>
-        <div class="col-md-3 col-md-offset-1">
-          <h2>Beet, Carrot, Apple, and Ginger Juice</h2>
-          <div class="image">
-            <img src="images/diet/apple.jpg" alt="">
+  <!--PRE-WORKOUT-->
+  <section id="workout-title">
+    <h1 id="preworkout-page"><b>PRE-WORKOUT</b></h1>
+  </section>
+    <section id="preworkout-page" class="preworkout-page">
+		  <!-- <h1 id="preworkout-page"><b>PRE-WORKOUT</b></h1> -->
+		  <div class="container-fluid">
+			  <div class="row">
+          <!--JUICE #1-->
+          <div class="col-md-3 col-sm-12 bg-1">
+            <div class="content">
+              <a href="beetroot.html"><img src="images/beetroot_juice.jpg" alt="beetroot" class="image" style="width:100%"></a>
+              <h3>Beetroot Juice</h3>
+              <p>Contains nitrate which improves exercise performance. Converted into nitrate oxide in the body, it improves blood circulation and increases muscle contradiction.</p>
+              <div class="read-recipe">
+                <a href="beetroot.html">Read Recipe</a>
+              </div>
+            </div>
           </div>
-
-          <p>The Iron You notes that beetroot juice is a great source of nitrate, which widens blood vessels, thus lowering your blood pressure and allowing for more blood flow. </p>
-
-            <h4><b>Ingredients</b></h4>
-            <p>3 medium beets, 2 large carrots, 1 apple, apple, cored and quartered,1 piece fresh ginger, peeled and chopped into 1-inch pieces and tablespoon squeezed lemon juice</p>
-            <p><b>Directions:</b> Pass beets, carrots, apple, and ginger through a juicer and strain through a fine-mesh sieve into a large bowl. Add lemon juice and mix</p>
-
-
-        </div>
-        <div class="col-md-3 col-md-offset-1" id="soy">
-          <h2>Soy Protein Shake</h2><br>
-          <div class="image">
-            <img  src="images/diet/soy.jpg" alt="">
+          <!--JUICE #2-->
+          <div class="col-md-3 col-sm-12 bg-1">
+            <div class="content">
+              <a href="chiaberry.html"><img src="images/chia_berry.jpg" alt="chia" class="image" style="width:100%"></a>
+              <h3>Chia Berry Smoothie</h3>
+              <p>Drinking this before exercising can help surpress post-exercise muscle fatigue, as berries are a natural source of antioxidants. The chia seeds added are a good source of dietary fibre and protein.</p>
+              <div class="read-recipe">
+                <a href="chiaberry.html">Read Recipe</a>
+              </div>
+            </div>
           </div>
-
-          <p>Soy reduce your risk of heart disease, and provide you with vitamins and minerals. In addition, it’s a good source of protein and can help build and repair muscles.</p>
-          <h4><b>Ingredients</b></h4>
-          <p>1 scoop powdered soy protein concentrate, ½ banana,1 tablespoon chunky peanut butter and 250 milk</p><br>
-          <p><b>Directions:</b> Mix all ingredients in a blender.</p>
-
-
-        </div>
-        <div class="col-md-3 col-md-offset-1" id="coco">
-          <h2>The Cocolina</h2><br>
-          <div class="image">
-            <img  src="images/diet/cocolina.jpg" alt="">
+          <!--JUICE #3-->
+          <div class="col-md-3 col-sm-12 bg-1">
+            <div class="content">
+              <a href="pomegranate.html"><img src="images/pomegranate_passion.jpg" alt="passion" class="image" style="width:100%"></a>
+              <h3>Pomegranate Passion</h3>
+              <p>Pomegranate juice has lots of vitamins that can help exercise performance and post-exercise recovery.</p>
+              <div class="read-recipe">
+                <a href="pomegranate.html">Read Recipe</a>
+              </div>
+            </div>
           </div>
-
-          <p>Coconut water is packed with potassium, which ensures you won't cramping mid-workout, and spirulina is a good source of protein, amino acids and vitamins. </p>
-          <h4><b>Ingredients</b></h4>
-          <p>Coconut water and ½ teaspoon spirulina powder</p><br><br>
-          <p><b>Directions:</b> Pour coconut water into a sports bottle and mix in the spirulina powder. Tightly secure bottle cap and shake well.</p>
-
-
-
+          <!--JUICE #4-->
+          <div class="col-md-3 col-sm-12 bg-1">
+            <div class="content">
+              <a href="bananaapple.html"><img src="images/banana_apple.jpg" alt="banana" class="image" style="width:100%"></a>
+              <h3>Banana Apple Juice</h3>
+              <p>Not only does the banana contain lots of vitamins and minerals, it also contains high energy carbs to provide energy that can improve exercise performance. The apple also have lots of vitamins and a revitalizing, cooling quality.</p>
+              <div class="read-recipe">
+                <a href="bananaapple.html">Read Recipe</a>
+              </div>
+            </div>
+          </div>
         </div>
-
-
       </div>
-
-      <div class="row">
-
-          <div class="post-work">
-            <h1>POST WORKOUT DRINKS</h1>
-            <div class="col-md-3 col-md-offset-1"id="citrus">
-              <h2>Citrus-Celery</h2>
-              <div class="image">
-                <img src="images/diet/Citrus-Celery.jpg" alt="">
-              </div>
-
-              <p>Celery contains compounds that may promote bone health, while citrus fruits are rich in vitamin c, a nutrient that plays a key role in forming collagen to keep joints working properly</p>
-              <h4><b>Ingredients</b></h4>
-              <p>1 lemon, 1 orange , 3 stalks celery 2 beets, 1 carrot and 1 handful basil</p><br>
-              <p><b>Directions:</b> Mix all ingredients in a blender.</p>
-
-            </div>
-            <div class="col-md-3 col-md-offset-1"id="protein-shake">
-              <h2>Berry Blast Protein Smoothie</h2>
-              <div class="image">
-              <img  src="images/diet/berrysmoothie.jpg" alt="">
-              </div>
-
-              <p>Milk supplies protein and carbs, while the frozen banana provides potassium and carbs to refuel your muscles, and antioxidants and fiber from the mixed berries.</p><br>
-              <h4><b>Ingredients</b></h4>
-              <p>1 scoop (1.6 oz) vanilla soy protein, 8 oz low-fat milk, ½ frozen banana and ¾ c frozen mixed berries</p>
-              <p><b>Directions:</b> Mix all ingredients in a blender.</p>
-            </div>
-            <div class="col-md-3 col-md-offset-1" id="pumpkin">
-              <h2>Powerhouse Pumpkin</h2>
-              <div class="image">
-                <img  src="images/diet/yellowsmoothie.jpg" alt="">
-              </div>
-
-              <p>Canned pumpkin is loaded with vitamin A, which protects against the cell damage that occurs during exercise. Avocados are high in monounsaturated fat which is been linked to reduction in inflammation.</p>
-              <h4><b>Ingredients</b></h4>
-              <p>½ cup pumpkin,200ml yogurt, ½ cup water,¼ avocado,2 Tbsp ground flaxseed, 1 Tbsp maple syrup and ½ tsp pumpkin pie spice</p>
-              <p><b>Directions:</b> Mix all ingredients in a blender.</p>
-
-            </div>
-
-          </div>
-
-
-
-
-
-      </div>
-
-
     </section>
-    <footer >
 
-
-
+    <footer>
           <div class="container-fluid" id="diva">
-
-
-
-
           <h2>Join Our Train Well, Be Well</h2>
           <h1>CULTURE</h1>
           <form class="form" action="http://github.us16.list-manage.com/subscribe/post?u=38946229138e86ab31ea923ec&amp;id=bf29ded2ed" method="post">
@@ -146,7 +114,6 @@
               <button type="submit" name="subscribe" class=" btn btn-info ">Join</button>
 
             </div>
-
           </form>
           <div class="row">
 
