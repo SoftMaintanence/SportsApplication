@@ -1,17 +1,87 @@
+*{
+  /*To avoid horizontal scroll*/
+  max-width: 100%;
+  font-family: "Arial", "Halevetica", sans-serif;
+}
+html,body{
+  /* remove padding and margin on body and give it total height*/
+  margin: 0;
+  padding:0;
+  height:100%;
+  width: 100%;
+  background-color: #F3F3FB;
+}
+
+section#header{
+  height: 80%;
+  padding: 5% 10% 5% 10%;
+  background: url(images/running-track.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: left;
+  background-position-y: center;
+
+  background-color: rgba(76, 73, 88, 0.356);
+  background-blend-mode: multiply;
+}
+
+.info h1{
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 10em;
+}
+
+.info p{
+  color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.92em;
+}
+
+section#menu-bar{
+  background-color: #F3F3FB;
+  height: fit-content;
+  text-align: center;
+}
+#menu-bar .menu{
+  width: 80%;
+  margin: auto;
+}
+#menu-bar .badminton-page,
+#menu-bar .hockey-page,
+#menu-bar .squash-page,
+#menu-bar .taekwondo-page{
+  background-color: #F3F3FB;
+  box-sizing: border-box;
+  border-style: hidden;
+  font-size: 18px;
+  width: 24%;
+
+  padding: 8px;
+}
+#menu-bar .badminton-page:hover,
+#menu-bar .hockey-page:hover,
+#menu-bar .squash-page:hover,
+#menu-bar .taekwondo-page:hover{
+  background-color: #0095CA;
+  color: #F3F3FB;
+  font-weight: bold;
+}
+
+
 .header{
-	background-color:white;
 	padding: 5% 10% 5% 10%;
 	margin-left: 5em;
-	color: #005876;
-	height: 35em;
+	color: #004960;
+	height: 35em; 
+}
 
+.container-fluid{
+  background-color: #ffffff;
 }
 
 .header h1{
 	font-size: 5em;
-
 	text-align: left;
-
 }
 
 #logo{
@@ -33,7 +103,7 @@
 	margin-left: 3em;
 	font-family: 'Quicksand', sans-serif;
 	text-align: center;
-	padding-bottom: 0px;
+	padding-bottom: 15px;
 	color: #004960;
 }
 .topic{
@@ -41,7 +111,7 @@
 	font-size: 1.5em;
 	margin-left: 7em;
 	text-align: center;
-	padding-bottom: 0px;
+	padding-bottom: 10px;
 }
 .dates{
 margin-left: 7em;
@@ -78,18 +148,17 @@ p{
    padding: 10px;
 }
 body{
-	background-color: white;
+	background-color: #f0f5e7;
 }
 
 footer{
   height:50%;
-  width: justify;
 
 }
 #diva{
-    background-color: #001030;
-  height: 30%;
-    margin-top: 1em;
+    background-color: #004960;
+  height: 100%;
+    margin-top: 10em;
     width: 100%;
 }
 #diva h1{
@@ -135,7 +204,7 @@ footer{
 }
 
 
-/media query for footer/
+/*media query for footer*/
 @media only screen and (max-width: 993px) {
 
   footer{
@@ -143,7 +212,6 @@ footer{
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
-
   }
 
   #diva h1{
@@ -164,7 +232,6 @@ footer{
     margin-left: 5%;
     align-content: center;
     margin-top: 0em;
-
   }
 
   #diva form{
@@ -172,12 +239,10 @@ footer{
   }
 
   #diva form input{
-
     height: 2em;
   }
 
   #diva form button{
-
     height: 2em;
   }
 }

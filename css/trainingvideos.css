@@ -1,6 +1,81 @@
-html,body{
-	background-color: #f0f5e7;
+*{
+	/*To avoid horizontal scroll*/
+	max-width: 100%;
+	font-family: "Arial", "Halevetica", sans-serif;
+  }
+  html,body{
+	/* remove padding and margin on body and give it total height*/
+	margin: 0;
+	padding:0;
+	height:100%;
+	width: 100%;
+	background-color: #F3F3FB;
+  }
+
+section#header{
+	height: 80%;
+	padding: 5% 10% 5% 10%;
+	background: url(images/training.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: left;
+	background-position-y: center;
+  
+	background-color: rgba(76, 73, 88, 0.356);
+	background-blend-mode: multiply;
+  }
+  
+.info h1{
+	color: white;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	font-size: 10em;
 }
+  
+.info p{
+	color: white;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	font-size: 1.92em;
+}
+  
+section#menu-bar{
+	background-color: #F3F3FB;
+	height: fit-content;
+	text-align: center;
+  }
+#menu-bar .menu{
+	width: 95%;
+	margin: auto;
+  }
+#menu-bar .sprinting-marathon-page,
+#menu-bar .javelin-throwing-page,
+#menu-bar .volleyball-page,
+#menu-bar .swimming-page,
+#menu-bar .basketball-page,
+#menu-bar .soccer-page,
+#menu-bar .misc-page{
+	background-color: #F3F3FB;
+	box-sizing: border-box;
+	border-style: hidden;
+	font-size: 18px;
+	/* width: 14%; */
+	padding: 8px;
+	/* padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 2px;
+	padding-right: 2px; */
+  }
+#menu-bar .sprinting-marathon-page:hover,
+#menu-bar .javelin-throwing-page:hover,
+#menu-bar .volleyball-page:hover,
+#menu-bar .swimming-page:hover,
+#menu-bar .basketball-page:hover,
+#menu-bar .soccer-page:hover,
+#menu-bar .misc-page:hover{
+	background-color: #0095CA;
+	color: #F3F3FB;
+	font-weight: bold;
+  }
+
 #navimage img{
   display: block;
 }
@@ -9,28 +84,35 @@ section#news{
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 5%;
-	background-color: #f0f5e7;
+	background-color: #F3F3FB;
 }
+
+.header1{
+	font-size: 47px;
+	text-align: center;
+	background-color: #004960;
+	color:#F3F3FB;
+}
+
+.container-fluid{
+	margin-top: 30px;
+}
+
+.header2{
+	font-size: 36px;
+	color: #004960;
+	text-align: center;
+}
+
+h1{
+	text-align: center;
+	color: #004960;
+}
+
 hr{
 	width: 80%;
-	background-color: #ccc;
+	/* background-color: rgb(139, 136, 136); */
 	height: 1px;
-}
-#header{
-	color: #004960;
-	padding: 30px;
-	font-size: 40px;
-	text-align: center;
-	font-family: sans-serif;
-	font-family: 'Quicksand', Open Sans;
-}
-#header2{
-	color: #000000;
-	padding: 10px;
-	font-size: 20px;
-	text-align: center;
-	font-family: sans-serif;
-	font-family: 'Quicksand', Open Sans;
 }
 .bg-1{
 	padding: 0;
@@ -40,6 +122,7 @@ hr{
 	padding: 2%;
 	background-color: #ffffff;
 	margin-bottom: 3%;
+	border-radius: 10px;
 }
 .thumbnail{
 	border-color: transparent;
