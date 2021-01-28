@@ -1,5 +1,42 @@
-html,body{
-	background-color: #f0f5e7;
+*{
+	/*To avoid horizontal scroll*/
+	max-width: 100%;
+	font-family: "Arial", "Halevetica", sans-serif;
+  }
+  html,body{
+	/* remove padding and margin on body and give it total height*/
+	margin: 0;
+	padding:0;
+	height:100%;
+	width: 100%;
+	background-color: #F3F3FB;
+  }
+
+section#header{
+	height: 80%;
+	padding: 5% 10% 5% 10%;
+	background: url(images/news.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-x: left;
+	background-position-y: center;
+  
+	background-color: rgba(76, 73, 88, 0.356);
+	background-blend-mode: multiply;
+  }
+  
+.info h1{
+	color: white;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	font-size: 3em;
+	text-align: left;
+}
+  
+.info p{
+	color: white;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	font-size: 0.53em;
+	text-align: left;
 }
 #navimage img{
   display: block;
@@ -9,7 +46,7 @@ section#news{
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-bottom: 5%;
-	background-color: #f0f5e7;
+	background-color: inherit;
 }
 hr{
 	width: 80%;
@@ -17,28 +54,53 @@ hr{
 	height: 1px;
 }
 #header{
-	color: #004960;
+	color: #004084;
 	padding: 30px;
 	font-size: 70px;
 	text-align: center;
-	font-family: sans-serif;
-	font-family: 'Quicksand', Open Sans;
+}
+.container-fluid{
+	margin-top: 30px;
+}
+.row{
+	max-width: 90%;
+	margin: auto;
 }
 .bg-1{
 	padding: 0;
 	float: left;
 }
 .content{
+	height: 330px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	border-style: hidden;
+
 	padding: 5%;
 	margin: 3%;
 	text-align: left;
-	font-family: 'Nunito', sans-serif;
 	background-color: #ffffff;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+.content h4{
+	display: block;
+	height: 30px;
+	text-transform: capitalize;
+	text-align: justify;
+}
 #comment{
 	padding-top: 5px;
+	text-align: justify;
+	height: 70px;
 }
+
+.read-more a{
+	color: #006F94;
+	font-weight: bold;
+	padding: 0;
+	margin: 0px;
+}
+
 @media only screen and (max-width:991px){
 	.img-responsive{
 		width: 100%;
@@ -46,6 +108,6 @@ hr{
 	.content p{
 		font-size: 16px;
 	}
-	section#news{
-	
+	/* section#news{
+	} */
 }

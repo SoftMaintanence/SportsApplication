@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-
-  <title>Sports Swift</title>
-  <link href=running-man-1399282_960_720.png rel=icon>
-
-  <link rel="stylesheet" href="css/bootstrap.css"><!--bootstrap css-->
-  <link rel="stylesheet" href="css/leaflet.css"><!--stylesheet for mapping-->
-  <link rel="stylesheet" href="css/styles.css"><!--custom stylesheet-->
-  <link rel="stylesheet" type="text/css" href="css/trainingvideos.css"><!--stylesheet for training videos-->
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"><!--stylesheet for fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><!--stylesheet for fonts-->
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Training Videos</title>
+	<link href="images/logo.png" rel="icon">
+	<link rel="stylesheet" href="css/bootstrap.css"><!--bootstrap css-->
+	<link rel="stylesheet" href="css/styles.css"><!--stylesheet for mapping-->
+	<link rel="stylesheet" href="css/trainingvideos.css"><!--custom stylesheet-->
 </head>
 <body>
-<nav>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html">Home</a>
-      <a href="calender.html">Events</a>
-      <a href="dietetics.html">Dietetics</a>
-      <a href="news.html">News</a>
-      <a href="trainingvideos.html">Training</a>
-    </div>
-
-    <span onclick="openNav()" id="navimage"><img src="running-man-1399282_960_720.png" alt=""></span>
-
-  </nav>
-
+	<nav>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">Home</a>
+			<a href="calender.html">Events</a>
+			<a href="dietetics.html">Dietetics</a>
+			<a href="news.html">News</a>
+			<a href="trainingvideos.html">Training</a>
+		</div>
+		<span onclick="openNav()" id="navimage"><img src="images/logo.png"  id="navimage1" alt=""></span>
+	</nav>
+	<!---HEADER-->
+	<section id="header">
+		<div class="header-row">
+			<!--DIVIDE INTO 2 COLUMNS-->
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<div class="info">
+				<h1>TRAINING VIDEOS</h1>
+				<p>Aim to be better. Train to be better.</p>
+			</div>
+		</div>
+	</section>
+	<!---MENU BAR-->
+	<section id="menu-bar">
+		<div class="menu">
+		<button href="#sprinting-marathon" id="sprinting-marathon" class="sprinting-marathon-page">SPRINTING & MARATHON</button>
+		<button href="#javelin-throwing" id="javelin-throwing" class="javelin-throwing-page">JAVELIN THROWING</button>
+		<button href="#volleyball" id="volleyball" class="volleyball-page">VOLLEYBALL</button>
+		<button href="#swimming" id="swimming" class="swimming-page">SWIMMING</button>
+		<button href="#basketball" id="basketball" class="basketball-page">BASKETBALL</button>
+		<button href="#soccer" id="soccer" class="soccer-page">SOCCER</button>
+		<button href="#misc" id="misc" class="misc-page">MISC.</button>
+		</div>
+	</section>
 <!--Training videos-->
+		<div class=header1><b>TRAINING VIDEOS</b></div>
+
 	<section id="news">
-		<h1 id="header"><b>TRAINING VIDEOS</b></h1>
 		<div class="container-fluid">
 			<div class="row">
-				<h1 id="header2"><b>Sprinting and Marathon</b></h1><hr>
+				<!--FIRST ROW-->
+				<h1 id="sprinting-marathon" class="sprinting-marathon-page"><b>Sprinting and Marathon</b></h1><hr>
 				<div class="col-md-3 col-sm-12 bg-1">
 					<div class="content">
 						  <a href="#" class="thumbnail">
@@ -63,8 +81,9 @@
 					</div>
 				</div>
         </div>
+		<!--THIRD ROW-->
         <div class="row">
-			<h1 id="header2"><b>Javelin Throwing</b></h1><hr>
+			<h1 id="javelin-throwing" class="javelin-throwing-page"><b>Javelin Throwing</b></h1><hr>
 				<div class="col-md-3 col-sm-12 bg-1">
 					<div class="content">
 					   <a href="#" class="thumbnail">
@@ -94,9 +113,9 @@
 					</div>
 				</div>
         </div>
-
+			<!--THIRD ROW-->
 			<div class="row">
-			<h1 id="header2"><b>Volley ball</b></h1><hr>
+			<h1 id="volleyball" class="volleyball-page"></h1><b>Volleyball</b></h1><hr>
 				<div class="col-md-3 col-sm-12 bg-1">
 					<div class="content">
 					   <a href="#" class="thumbnail">
@@ -128,7 +147,7 @@
         </div>
 
 					<div class="row">
-			<h1 id="header2"><b>Swimming</b></h1><hr>
+			<h1 id="swimming" class="swimming-page"></h1><b>Swimming</b></h1><hr>
 				<div class="col-md-3 col-sm-12 bg-1">
 					<div class="content">
 					   <a href="#" class="thumbnail">
@@ -160,7 +179,7 @@
 				</div>
         </div>
 					<div class="row">
-			<h1 id="header2"><b>Basketball</b></h1><hr>
+			<h1 id="basketball" class="basketball-page""><b>Basketball</b></h1><hr>
 				<div class="col-md-3 col-sm-12 bg-1">
 					<div class="content">
 					   <a href="#" class="thumbnail">
@@ -191,7 +210,7 @@
 				</div>
         </div>
 			<div class="row">
-			<h1 id="header2"><b>Soccer</b></h1><hr>
+			<h1  id="soccer" class="soccer-page"><b>Soccer</b></h1><hr>
 				<div class="col-md-3 col-sm-12 bg-1">
 					<div class="content">
 					   <a href="#" class="thumbnail">
@@ -222,7 +241,7 @@
 				</div>
         </div>
 					<div class="row">
-			<h1 id="header2"><b>Others</b></h1><hr>
+			<h1  id="misc" class="misc-page"><b>Misc.</b></h1><hr>
 				<div class="col-md-6 col-sm-12 bg-1">
 					<div class="content">
 					     <a href="#" class="thumbnail">
