@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css"><!--custom stylesheet-->
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
@@ -83,7 +84,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
 </style>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50" >
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50" onload="myFunction()">
 
     <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -94,8 +95,9 @@ https://www.tooplate.com/view/2119-gymso-fitness
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
     <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
     <a href="calender.html" onclick="w3_close()" class="w3-bar-item w3-button">Events</a>
+    <a href="personal.php" onclick="w3_close()" class="w3-bar-item w3-button">Dietetics</a>
     <a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">News</a>
-    <a href="personal.html" onclick="w3_close()" class="w3-bar-item w3-button">Personalised Recommendation</a>
+    <a href="Training.html" onclick="w3_close()" class="w3-bar-item w3-button">Training</a>
     </nav>
 
     <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()"><img src="images/logo.png" alt="☰" width="30" height="30"></div>
@@ -281,10 +283,30 @@ https://www.tooplate.com/view/2119-gymso-fitness
             </div>
         </div>
     </section>
+    <br></br>
 <!-- footer put before script -->
 
-<footer class="site-footer" style="color:#000099; text-align: center;"  >
-          <p>Software Maintenance, All Rights Reserved (C)</p>
+<footer>
+  <div class="container-fluid" id="diva">
+  <h2>Join Our Train Well, Be Well</h2>
+  <form class="form" action="http://github.us16.list-manage.com/subscribe/post?u=38946229138e86ab31ea923ec&amp;id=bf29ded2ed" method="post">
+    <div class="form-group">
+      <input type="email" name="EMAIL" value="" placeholder="example@email.com">
+      <button type="submit" name="subscribe" class=" btn btn-info ">Join</button>
+
+    </div>
+
+  </form>
+  <div class="row justify-content-md-center">
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/Sports-Swift-296202374123622" class="col-sm" ><img src="png/png/facebook1.png" alt=""></a>
+        <a href="https://twitter.com/sportswift2017" class="col-sm"><img src="png/png/twitter1.png" alt=""></a>
+        <a href="https://www.instagram.com/sport.swift/" class="col-sm"><img src="png/png/instagram1.png" alt=""></a>
+      </div>
+
+    </div>
+
+  </div>
 </footer>
 
     <!-- SCRIPTS -->
